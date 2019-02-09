@@ -4,7 +4,6 @@ import com.game.plane.dto.CommonResponse;
 import com.game.plane.entity.Fact;
 import com.game.plane.enums.ReturnCode;
 import com.game.plane.service.FactService;
-import net.bytebuddy.asm.Advice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -17,7 +16,7 @@ public class FactController {
     private FactService factService;
 
     @PostMapping()
-    public CommonResponse registerFace(@RequestBody Fact fact) {
+    public CommonResponse registerFact(@RequestBody Fact fact) {
         CommonResponse response = new CommonResponse();
 
         try {
